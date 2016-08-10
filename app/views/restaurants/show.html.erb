@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="media">
+    <div class="media-body">
+      <div class="media-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= @restaurant.image %>');">
+      </div>
+      <div class="media-section">
+      <% if @restaurant.reviews %>
+        <h4><%= @restaurant.reviews.size %> Reviews</h4>
+        <% @restaurant.reviews.each do |review| %>
+        <div class="reviews">
+           <p>" <%= review.content %> "</p>
+           <% review.rating.times do %>
+              <i class="fa fa-star yellow"></i>
+            <% end %>
+            <% (5 - review.rating).times do %>
+              <i class="fa fa-star gray-light"></i>
+            <% end %>
+        </div>
+        <% end %>
+      <% end %>
+      <%= link_to "Post a review", new_restaurant_review_path(@restaurant), class: "navbar-wagon-button btn" %>
+      </div>
+    </div>
+    <div class="media-aside">
+      <div class="media-section">
+        <h4><%= @restaurant.name %></h4>
+        <br>
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @restaurant.address %></p>
+        <p> <i class="fa fa-phone" aria-hidden="true"></i> <%= @restaurant.phone_number %></p>
+        <p> <i class="fa fa-cutlery" aria-hidden="true"></i> <%= @restaurant.category.capitalize %></p>
+      </div>
+    </div>
+  </div>
+</div>

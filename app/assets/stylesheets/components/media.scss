@@ -1,0 +1,46 @@
+.media {
+  display: flex;
+}
+.media-body {
+  flex: 1 1 auto;
+  padding: 0 20px;
+}
+.media-body img {
+  width: 100%;
+}
+.media-aside {
+  flex: 0 0 400px;
+  padding: 30px;
+  align-self: stretch;
+  background: #F8F7F7;
+  border-left: 1px solid #f0efef;
+  height: 400px;
+  h4 {
+    color: $red;
+  }
+  p {
+    font-weight: 100;
+    font-size: 14px;
+    i {
+      color: $gray-light;
+    }
+  }
+}
+.media-section {
+  margin: 40px auto;
+}
+.media-image {
+  background-size: cover !important;
+  height: 400px;
+}
+.media-section:first-child {
+  margin-top: 0;
+}
+.media-section:last-child {
+  margin-bottom: 0;
+}
+.reviews {
+  color: $gray-light;
+  font-weight: 100;
+  margin: 30px 20px;
+}

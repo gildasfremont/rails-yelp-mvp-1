@@ -1,0 +1,11 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <%= f.input :image, placeholder: "https://hd.unsplash.com/photo-1433155805822-ffc337821a5b" %>
+  <br>
+  <%= f.button :submit, class: "navbar-wagon-button" %>
+<% end %>

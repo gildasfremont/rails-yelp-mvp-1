@@ -1,0 +1,51 @@
+/* -------------------------------------
+ * Utilities classes
+ * These are examples of utilities classes
+ * Feel free to change them and create your own
+ * ------------------------------------- */
+.wrapper {
+  width: 1100px;
+  margin: 40px auto;
+}
+.intro {
+  color: $gray-light;
+  font-weight: 300;
+  margin: 10px 40px;
+}
+// Paddings
+.padded {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+// Backgrounds
+.bg-black {
+  background: #4a4a4a;
+}
+.bg-grey {
+  background: #aeaeae;
+}
+.bg-blue {
+  background: #00a3e1;
+}
+.bg-dark-blue {
+  background: #3b5998;
+}
+// Color
+.yellow {
+  color: $yellow;
+}
+.gray-light {
+  color: $gray-light;
+}
+.red {
+  color: $red;
+}
+
+// Images
+
+.image-xs {
+  background-size: cover !important;
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
